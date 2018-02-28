@@ -105,6 +105,12 @@ module.exports = function (na) {
     return hash
   }
 
+  exports.crypto_generichash = function (ptxt, length, key) {
+    var hash = Z(length || na.crypto_generichash_BYTES);
+    na.crypto_generichash(hash, ptxt, key)
+    return hash
+  }
+
   exports.crypto_hash_sha256 = function (ptxt) {
     var hash = Z(na.crypto_hash_sha256_BYTES)
     na.crypto_hash_sha256(hash, ptxt)
@@ -142,4 +148,3 @@ module.exports = function (na) {
 
   return exports
 }
-
