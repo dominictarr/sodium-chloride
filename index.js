@@ -1,6 +1,6 @@
 
 function Z(n) {
-  return new Buffer(n)
+  return Buffer.alloc(n)
 }
 
 module.exports = function (na) {
